@@ -24,7 +24,7 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
 - Subscribe to *`discount-offers`* FCM Channel from Android Device.
 - **Data Payload** will be as follows
 ```json
-  { 
+ { 
     "to": "/topics/discount-offers", 
     "priority": "high",
     "data" : {

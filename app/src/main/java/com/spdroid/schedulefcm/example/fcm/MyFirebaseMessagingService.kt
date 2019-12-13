@@ -39,7 +39,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                     // This is Scheduled Notification, Schedule it
                     val scheduledTime = remoteMessage.data["scheduledTime"]
                     scheduleAlarm(scheduledTime, title, message)
-                    // scheduleNotification(scheduledTime, title, message)
                 } else {
                     // This is not scheduled notification, show it now
                     showNotification(title!!, message!!)

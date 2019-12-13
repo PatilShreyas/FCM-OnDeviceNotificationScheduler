@@ -24,6 +24,7 @@ class NotificationScheduler(appContext: Context, workerParams: WorkerParameters)
 
         Log.d(TAG, "Work DONE")
         // Return result
+
         return Result.success()
     }
 
