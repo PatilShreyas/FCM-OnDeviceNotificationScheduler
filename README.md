@@ -20,7 +20,7 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
 - **`Firebase IID`** - Firebase Instance ID Library.
 - [**`WorkManager`**](https://developer.android.com/topic/libraries/architecture/workmanager) - Used for Background Work Processing.
 
-## What's Happening?
+## What's Happening? 🤔
 - Subscribe to *`discount-offers`* FCM Channel from Android Device.
 - **Data Payload** will be as follows
 ```json
@@ -43,5 +43,5 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
   
 Hurrah!😍 we have successfully implemented On-Device Scheduling of FCM Push Notification👍.
 
-### Connect With Me
+## 👉Connect With Me
 Visit [My Profile](https://patilshreyas.github.io).
