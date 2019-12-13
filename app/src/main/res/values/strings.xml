@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FCM Schedule Demo</string>
+    <string name="default_notification_channel_id">default</string>
+    <string name="button_subscribe_text">Subscribe Discount Offers Notifications</string>
+</resources>
