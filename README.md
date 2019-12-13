@@ -1,13 +1,11 @@
-**Support This Repository**
-
-![Github Followers](https://img.shields.io/github/followers/PatilShreyas?label=Follow&style=social)
-![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/FCM-OnDeviceNotificationScheduler?style=social)
-![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/FCM-OnDeviceNotificationScheduler?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/FCM-OnDeviceNotificationScheduler?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil?label=Follow&style=social)
-
 # 🔔 FCM - Push Notification Scheduler⏰ (On Device 📱) 
 This is demo app to implement FCM On Device Push Notification Scheduling using `AlarmManager` and `WorkManager`.
+
+### Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Star)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler) [![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Fork)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/fork) [![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Watch)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler) [![GitHub followers](https://img.shields.io/github/followers/PatilShreyas.svg?style=social&label=Follow)](https://github.com/PatilShreyas)
+[![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil.svg?style=social)](https://twitter.com/imShreyasPatil)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Introduction
 - We can use [***Cloud Pub/Sub***](https://firebase.google.com/docs/functions/schedule-functions) with [***Firebase Cloud Functions***](https://firebase.google.com/docs/functions) to send FCM Push Notifications. But this solution is costly to implement.
@@ -43,5 +41,33 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
   
 Hurrah!😍 we have successfully implemented On-Device Scheduling of FCM Push Notification👍.
 
-## 👉Connect With Me
+## Let's Test It
+I have sent below payload with to the FCM Channel (*`discount-offers`*).
+
+```json
+{ 
+ "to": "/topics/discount-offers", 
+ "priority": "high",
+ "data" : {
+  "title" : "🎅 Christmas Offer 🎄",
+  "message" : "Grab 90% Discount 😍 on Mobile Phones",
+  "isScheduled" : "true",
+  "scheduledTime" : "2019-12-13 14:12:00"
+ }
+}
+```
+
+🚀See output below and notice that **Internet/Wi-Fi** is ***OFF*** still at exactly 02:12 pm I'm getting a notification on the system tray 😃.
+
+![Output](output/Demo.gif)
+
+Yippie 😍! It's working as expected. Hope you liked that. If you find it helpful please share this. Maybe it'll help someone needy!
+
+
+### :heart: Found this project useful?
+If you found this project useful, then please consider giving it a :star: on Github and sharing it with your friends via social media.
+> Sharing is Caring!
+
+## Connect With Me
+If you want to contact me, feel free to reach me…
 Visit [My Profile](https://patilshreyas.github.io).
