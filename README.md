@@ -18,6 +18,34 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
 - **`Firebase IID`** - Firebase Instance ID Library.
 - [**`WorkManager`**](https://developer.android.com/topic/libraries/architecture/workmanager) - Used for Background Work Processing.
 
+## Implementation Structure
+
+```
+src
+│
+└───fcm
+│   │   MyFirebaseMessagingService.kt
+│   │   NotificationBroadcastReceiver.kt
+|   |   NotificationScheduler.kt
+│   
+└───util
+|   │   NotificationUtil.kt
+|   │   SettingUtil.kt
+|
+└───ui
+|   │   MainActivity.kt
+|   
+```
+
+- ***`MyFirebaseMessagingService`***: FCM Receiver Service Implementation. Process of Notification Scheduling using `AlarmManager` is implemented here.
+- ***`NotificationBroadcastReceiver`***: `BroadcastReceiver` Implementation. Executed when AlarmManager is triggered. WorkManager is initiated and executed for background processing.
+- ***`NotificationScheduler`***: `WorkManager` Implementation. Notification is displayed in the system tray and other background processed are executed.
+
+- ***`NotificationUtil`***: Implementation to display Notification on the system tray.
+- ***`SettingUtil`***: Function implementation to check whether *Automatic Date & Time* setting is ON/OFF.
+
+- ***`MainActivity`***: UI Implementation to subscribe to FCM Channel.
+
 ## What's Happening? 🤔
 - Subscribe to *`discount-offers`* FCM Channel from Android Device.
 - **Data Payload** will be as follows
@@ -34,10 +62,10 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
 }
 ```
   *Format of `scheduledTime`: **YYYY-MM-DD HH:MM:SS***
-- Receive FCM on device and `onMessageReceived()` in [`MyFirebaseMessagingService`](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/blob/master/app/src/main/java/com/spdroid/schedulefcm/example/fcm/MyFirebaseMessagingService.kt) will be invoked. In `onMessageReceived()` following operations will be done-
-  - If `isScheduled` parameter received is `false` then notifications is displayed in system tray instantly.
+- Receive FCM on device and `onMessageReceived()` in [`MyFirebaseMessagingService`](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/blob/master/app/src/main/java/com/spdroid/schedulefcm/example/fcm/MyFirebaseMessagingService.kt) will be invoked. In this, following operations will be done-
+  - If `isScheduled` parameter received is `false` then notifications is displayed in system tray **instantly**.
   - If `isScheduled` is `true` then `scheduledTime` is parsed from payload and `AlarmManager` is used to set *one-time* alarm at that time and [`NotificationBroadcastReceiver`](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/blob/master/app/src/main/java/com/spdroid/schedulefcm/example/fcm/NotificationBroadcastReceiver.kt) implementation will be executed on that time.
-  - In `onReceive()`, we have scheduled a `WorkManager` [`NotificationScheduler`](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/blob/master/app/src/main/java/com/spdroid/schedulefcm/example/fcm/NotificationScheduler.kt) for background work processing. There in `doWork()`, we're finally we're displaying Notification on system tray. Do any background proessing and return status from `WorkManager`.
+  - In `onReceive()`, we have scheduled a *WorkManager* [`NotificationScheduler`](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/blob/master/app/src/main/java/com/spdroid/schedulefcm/example/fcm/NotificationScheduler.kt) for background work processing. There in `doWork()`, we're finally we're displaying Notification on system tray. Do any background proessing and return status from *WorkManager*.
   
 Hurrah!😍 we have successfully implemented On-Device Scheduling of FCM Push Notification👍.
 
