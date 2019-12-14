@@ -31,7 +31,7 @@ src
 └───fcm
 │   │   MyFirebaseMessagingService.kt
 │   │   NotificationBroadcastReceiver.kt
-|   |   ScheduledWorker.kt
+│   │   ScheduledWorker.kt
 │   
 └───util
 |   │   NotificationUtil.kt
