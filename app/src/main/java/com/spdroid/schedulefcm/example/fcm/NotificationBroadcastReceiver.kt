@@ -7,8 +7,8 @@ import android.util.Log
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
-import com.spdroid.schedulefcm.example.fcm.NotificationScheduler.Companion.NOTIFICATION_MESSAGE
-import com.spdroid.schedulefcm.example.fcm.NotificationScheduler.Companion.NOTIFICATION_TITLE
+import com.spdroid.schedulefcm.example.fcm.ScheduledWorker.Companion.NOTIFICATION_MESSAGE
+import com.spdroid.schedulefcm.example.fcm.ScheduledWorker.Companion.NOTIFICATION_TITLE
 
 class NotificationBroadcastReceiver : BroadcastReceiver() {
 
@@ -24,7 +24,7 @@ class NotificationBroadcastReceiver : BroadcastReceiver() {
                 .build()
 
             // Init Worker
-            val work = OneTimeWorkRequest.Builder(NotificationScheduler::class.java)
+            val work = OneTimeWorkRequest.Builder(ScheduledWorker::class.java)
                 .setInputData(notificationData)
                 .build()
 

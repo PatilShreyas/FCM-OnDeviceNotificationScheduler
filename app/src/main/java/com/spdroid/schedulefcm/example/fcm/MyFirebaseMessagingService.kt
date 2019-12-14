@@ -7,8 +7,8 @@ import android.content.Intent
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.spdroid.schedulefcm.example.fcm.NotificationScheduler.Companion.NOTIFICATION_MESSAGE
-import com.spdroid.schedulefcm.example.fcm.NotificationScheduler.Companion.NOTIFICATION_TITLE
+import com.spdroid.schedulefcm.example.fcm.ScheduledWorker.Companion.NOTIFICATION_MESSAGE
+import com.spdroid.schedulefcm.example.fcm.ScheduledWorker.Companion.NOTIFICATION_TITLE
 import com.spdroid.schedulefcm.example.util.NotificationUtil
 import com.spdroid.schedulefcm.example.util.isTimeAutomatic
 import java.text.SimpleDateFormat

@@ -6,7 +6,7 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.spdroid.schedulefcm.example.util.NotificationUtil
 
-class NotificationScheduler(appContext: Context, workerParams: WorkerParameters) :
+class ScheduledWorker(appContext: Context, workerParams: WorkerParameters) :
     Worker(appContext, workerParams) {
 
     override fun doWork(): Result {
@@ -29,7 +29,7 @@ class NotificationScheduler(appContext: Context, workerParams: WorkerParameters)
     }
 
     companion object {
-        private val TAG = "NotificationScheduler"
+        private const val TAG = "ScheduledWorker"
         const val NOTIFICATION_TITLE = "notification_title"
         const val NOTIFICATION_MESSAGE = "notification_message"
     }
