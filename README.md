@@ -18,6 +18,11 @@ In this demo app, We are subscribing to a FCM Channel *`discount-offers`*. We'll
 - **`Firebase IID`** - Firebase Instance ID Library.
 - [**`WorkManager`**](https://developer.android.com/topic/libraries/architecture/workmanager) - Used for Background Work Processing.
 
+## Setup
+- Setup project in Firebase Console.
+- Download and paste `google-services.json`  configuration file in `/app` directory.
+- Keep legacy API key for FCM Push Notification REST.
+
 ## Implementation Structure
 
 ```
