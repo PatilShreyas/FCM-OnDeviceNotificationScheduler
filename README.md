@@ -1,10 +1,11 @@
 # 🔔 FCM - Push Notification Scheduler⏰ (On Device 📱) 
+## Article About this is available [here](https://medium.com/mindorks/scheduling-fcm-push-notifications-on-device-android-2d3bb9653b4d).
 This is demo app to implement FCM On Device Push Notification Scheduling using `AlarmManager` and `WorkManager`.
 
 ### Show some :heart: and star the repo to support the project
-
 [![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Star)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler) [![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Fork)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler/fork) [![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/FCM-OnDeviceNotificationScheduler.svg?style=social&label=Watch)](https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler) [![GitHub followers](https://img.shields.io/github/followers/PatilShreyas.svg?style=social&label=Follow)](https://github.com/PatilShreyas)
 [![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil.svg?style=social)](https://twitter.com/imShreyasPatil)
+[![Medium Article](https://img.shields.io/badge/@Medium-PatilShreyas-informational.svg)](https://medium.com/mindorks/scheduling-fcm-push-notifications-on-device-android-2d3bb9653b4d)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Introduction
@@ -31,7 +32,7 @@ src
 └───fcm
 │   │   MyFirebaseMessagingService.kt
 │   │   NotificationBroadcastReceiver.kt
-|   |   ScheduledWorker.kt
+│   │   ScheduledWorker.kt
 │   
 └───util
 |   │   NotificationUtil.kt
