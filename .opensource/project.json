@@ -1,0 +1,9 @@
+{
+	"name": "FCM - Scheduler(On Device)",
+	
+	"platforms": [
+      		"Android"
+    	],
+	
+	"content": "README.md",
+}
