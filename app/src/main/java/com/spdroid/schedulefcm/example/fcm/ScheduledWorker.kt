@@ -29,7 +29,7 @@ class ScheduledWorker(appContext: Context, workerParams: WorkerParameters) :
     }
 
     companion object {
-        private const val TAG = "ScheduledWorker"
+        private const val TAG = "ScheduledWorkerJava"
         const val NOTIFICATION_TITLE = "notification_title"
         const val NOTIFICATION_MESSAGE = "notification_message"
     }
