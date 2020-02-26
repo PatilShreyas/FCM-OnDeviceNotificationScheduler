@@ -7,6 +7,7 @@
     tools:context=".ui.MainActivity">
 
     <Button
+        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/buttonSubscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
