@@ -6,26 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-
-    <Button
-        android:text="Go to java version"
-        android:onClick="click_javaversion"
-        android:id="@+id/btn_javaversion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSubscribe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
-
     <Button
         android:id="@+id/buttonSubscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_subscribe_text"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
